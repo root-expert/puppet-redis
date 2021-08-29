@@ -474,7 +474,7 @@ Default value: ``false``
 
 ##### <a name="masterauth"></a>`masterauth`
 
-Data type: `Optional[String[1]]`
+Data type: `Optional[Variant[String[1], Sensitive[String[1]]]]`
 
 If the master is password protected (using the "requirepass" configuration
 
@@ -558,7 +558,7 @@ Data type: `String[1]`
 
 Default action for package.
 
-Default value: `'present'`
+Default value: `'installed'`
 
 ##### <a name="package_name"></a>`package_name`
 
@@ -1008,13 +1008,13 @@ Note that this class requires the herculesteam/augeasproviders_sysctl module.
 
 #### Examples
 
-#####
+##### 
 
 ```puppet
 include redis::administration
 ```
 
-#####
+##### 
 
 ```puppet
 class {'redis::administration':
@@ -1121,7 +1121,7 @@ The following parameters are available in the `redis::sentinel` class:
 
 ##### <a name="auth_pass"></a>`auth_pass`
 
-Data type: `Optional[String[1]]`
+Data type: `Optional[Variant[String[1], Sensitive[String[1]]]]`
 
 The password to use to authenticate with the master and slaves.
 
@@ -1379,7 +1379,7 @@ multiple redis instances on one machine without conflicts
 
 #### Examples
 
-#####
+##### 
 
 ```puppet
 redis::instance {'6380':
@@ -1723,7 +1723,7 @@ Default value: `$redis::log_level`
 
 ##### <a name="masterauth"></a>`masterauth`
 
-Data type: `Optional[String[1]]`
+Data type: `Optional[Variant[String[1], Sensitive[String[1]]]]`
 
 If the master is password protected (using the "requirepass" configuration
 
@@ -1739,7 +1739,7 @@ Default value: `$redis::maxclients`
 
 ##### <a name="maxmemory"></a>`maxmemory`
 
-Data type: `Any`
+Data type: `Optional[Variant[Integer, String]]`
 
 Don't use more memory than the specified amount of bytes.
 
@@ -1747,7 +1747,7 @@ Default value: `$redis::maxmemory`
 
 ##### <a name="maxmemory_policy"></a>`maxmemory_policy`
 
-Data type: `Any`
+Data type: `Optional[String]`
 
 How Redis will select what to remove when maxmemory is reached.
 
@@ -1755,7 +1755,7 @@ Default value: `$redis::maxmemory_policy`
 
 ##### <a name="maxmemory_samples"></a>`maxmemory_samples`
 
-Data type: `Any`
+Data type: `Optional[Variant[Integer, String]]`
 
 Select as well the sample size to check.
 

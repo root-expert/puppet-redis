@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v8.1.0](https://github.com/voxpupuli/puppet-redis/tree/v8.1.0) (2021-08-29)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-redis/compare/v8.0.0...v8.1.0)
+
+**Implemented enhancements:**
+
+- Use Puppet-Datatype Sensitive for $masterauth and $auth\_pass [\#403](https://github.com/voxpupuli/puppet-redis/pull/403) ([cocker-cc](https://github.com/cocker-cc))
+
+**Merged pull requests:**
+
+- Allow stdlib 8.0.0 [\#411](https://github.com/voxpupuli/puppet-redis/pull/411) ([smortex](https://github.com/smortex))
+
 ## [v8.0.0](https://github.com/voxpupuli/puppet-redis/tree/v8.0.0) (2021-07-24)
 
 [Full Changelog](https://github.com/voxpupuli/puppet-redis/compare/v7.0.0...v8.0.0)
